@@ -1,33 +1,33 @@
 const songs = [
     {
         title: "Aphrodite - The Ridleys",
-        src: "../../assets/audio/Aphrodite.mp3",
-        album: "../../assets/images/aphrodite.jpg",
-        lyricsFile: "../../assets/lyrics/aphrodite.txt"
+        src: "../assets/audio/Aphrodite.mp3",
+        album: "../assets/images/aphrodite.jpg",
+        lyricsFile: "../assets/lyrics/aphrodite.txt"
     },
     {
         title: "Hurts - LANY",
-        src: "../../assets/audio/lany-hurts.mp3",
-        album: "../../assets/images/hurts.jpg",
-        lyricsFile: "../../assets/lyrics/hurts.txt"
+        src: "../assets/audio/lany-hurts.mp3",
+        album: "../assets/images/hurts.jpg",
+        lyricsFile: "../assets/lyrics/hurts.txt"
     },
     {
         title: "LOVE. - Kendrick Lamar",
-        src: "../../assets/audio/Love.mp3",
-        album: "../../assets/images/Love.jpg",
-        lyricsFile: "../../assets/lyrics/love.txt"
+        src: "../assets/audio/Love.mp3",
+        album: "../assets/images/Love.jpg",
+        lyricsFile: "../assets/lyrics/love.txt"
     },
     {
         title: "Pink Skies - LANY",
-        src: "../../assets/audio/pinkskies.mp3",
-        album: "../../assets/images/pinkskies.jpg",
-        lyricsFile: "../../assets/lyrics/pinkskies.txt"
+        src: "../assets/audio/pinkskies.mp3",
+        album: "../assets/images/pinkskies.jpg",
+        lyricsFile: "../assets/lyrics/pinkskies.txt"
     },
     {
         title: "Thick and Thin - LANY",
-        src: "../../assets/audio/thick.mp3",
-        album: "../../assets/images/thick.jpg",
-        lyricsFile: "../../assets/lyrics/thick.txt"
+        src: "../assets/audio/thick.mp3",
+        album: "../assets/images/thick.jpg",
+        lyricsFile: "../assets/lyrics/thick.txt"
     }
 ];
 
