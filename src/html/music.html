@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>My Favorite Music</h1>
+        <navbar>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="music.html" id="favorites-btn">My Favorites</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </navbar>
+    </div>
+    <div class="pcontainer">
+        <div class="lyricsContainer">
+            <p id="lyrics"></p>
+        </div>
+        <div class="player">
+            <img id="album-cover" src="album1.jpg" alt="Album Cover">
+            <h2 id="song-title"> </h2>
+            <audio id="audio" src="song1.mp3"></audio>
+            <div class="controls">
+                <button id="prev-btn">Previous</button>
+                <button id="play-btn">Play</button>
+                <button id="next-btn">Next</button>
+            </div>
+        </div>
+    </div>
+    <script src="../script/script.js"></script>
+</body>
+</html>
