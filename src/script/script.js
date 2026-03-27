@@ -51,6 +51,7 @@ prevBtn.addEventListener("click", prevSong);
 
 audio.addEventListener("play", startBeats);
 audio.addEventListener("pause", stopBeats);
+audio.addEventListener("timeupdate", updateLyricHighlight);
 audio.addEventListener("ended", () => {
     stopBeats();
     nextSong();
@@ -72,27 +73,30 @@ function stopBeats() {
 }
 
 
-function buildTimedLyricsFromText(lyricsText, duration) {
+function parseTimedLyrics(lyricsText) {
     if (!lyricsText) return [];
 
-    const rawLines = lyricsText
-        .split("\n")
-        .map(line => line.trim())
-        .filter(line =>
-            line !== "" &&
-            !line.toLowerCase().includes("source:") &&
-            !line.toLowerCase().includes("songwriters:")
-        );
+    const lines = lyricsText.split("\n");
+    const timedLyrics = [];
 
-    if (rawLines.length === 0) return [];
+    for (const line of lines) {
+        const match = line.match(/\[(\d{2}):(\d{2})(?:\.(\d{2}))?\]\s*(.*)/);
 
-    const safeDuration = duration && isFinite(duration) ? duration : rawLines.length * 3;
-    const secondsPerLine = safeDuration / rawLines.length;
+        if (match) {
+            const minutes = parseInt(match[1], 10);
+            const seconds = parseInt(match[2], 10);
+            const hundredths = parseInt(match[3] || "0", 10);
+            const text = match[4].trim();
 
-    return rawLines.map((line, index) => ({
-        time: index * secondsPerLine,
-        text: line
-    }));
+            const time = minutes * 60 + seconds + hundredths / 100;
+
+            if (text) {
+                timedLyrics.push({ time, text });
+            }
+        }
+    }
+
+    return timedLyrics;
 }
 
 function renderLyrics() {
@@ -115,7 +119,7 @@ function updateLyricHighlight() {
     if (!currentSong.timedLyrics || currentSong.timedLyrics.length === 0) return;
 
     const currentTime = audio.currentTime;
-    let newIndex = 0;
+    let newIndex = -1;
 
     for (let i = 0; i < currentSong.timedLyrics.length; i++) {
         if (currentTime >= currentSong.timedLyrics[i].time) {
@@ -130,11 +134,17 @@ function updateLyricHighlight() {
 
         const lines = lyricsDisplay.querySelectorAll(".lyric-line");
         lines.forEach((line, index) => {
-            line.classList.toggle("active-lyric", index === currentLyricIndex);
+            line.classList.remove("active-lyric", "past-lyric");
+
+            if (index < currentLyricIndex) {
+                line.classList.add("past-lyric");
+            } else if (index === currentLyricIndex) {
+                line.classList.add("active-lyric");
+            }
         });
 
         const activeLine = lyricsDisplay.querySelector(".active-lyric");
-        if (activeLine && window.innerWidth > 768) {
+        if (activeLine) {
             activeLine.scrollIntoView({
                 behavior: "smooth",
                 block: "center"
@@ -202,31 +212,30 @@ async function updateSong(autoPlay = true) {
     }
 
     const lyricsText = await loadLyricsFromFile(currentSong.lyricsFile);
-    currentSong.timedLyrics = [];
+
+    // Use the correct parser
+    currentSong.timedLyrics = parseTimedLyrics(lyricsText);
+
+    renderLyrics();
+    updateLyricHighlight();
 
     audio.load();
 
-    audio.onloadedmetadata = function () {
-        currentSong.timedLyrics = buildTimedLyricsFromText(lyricsText, audio.duration);
-        renderLyrics();
-        updateLyricHighlight();
-
-        if (autoPlay) {
-            audio.play()
-                .then(() => {
-                    playBtn.innerText = "Pause";
-                    startBeats();
-                })
-                .catch(error => {
-                    console.error("Autoplay failed:", error);
-                    playBtn.innerText = "Play";
-                    stopBeats();
-                });
-        } else {
-            playBtn.innerText = "Play";
-            stopBeats();
-        }
-    };
+    if (autoPlay) {
+        audio.play()
+            .then(() => {
+                playBtn.innerText = "Pause";
+                startBeats();
+            })
+            .catch(error => {
+                console.error("Autoplay failed:", error);
+                playBtn.innerText = "Play";
+                stopBeats();
+            });
+    } else {
+        playBtn.innerText = "Play";
+        stopBeats();
+    }
 }
 
 function handleResponsiveLyrics() {
