@@ -207,7 +207,7 @@ async function updateSong(autoPlay = true) {
         albumCover.src = currentSong.album;
         albumCover.alt = "Album cover for " + currentSong.title;
     } else {
-        albumCover.src = "../../assets/images/default.jpg";
+        albumCover.src = "assets/images/default.jpg";
         albumCover.alt = "Default album cover";
     }
 
