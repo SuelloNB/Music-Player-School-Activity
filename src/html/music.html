@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music</title>
+    <title>My Favorite Music</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <div class="header">
+    <header class="header">
         <h1>My Favorite Music</h1>
         <nav>
             <ul>
@@ -16,22 +16,26 @@
                 <li><a href="about.html">About</a></li>
             </ul>
         </nav>
-    </div>
-    <div class="pcontainer">
-        <div class="lyricsContainer">
-            <p id="lyrics"></p>
-        </div>
-        <div class="player">
-            <img id="album-cover" src="album1.jpg" alt="Album Cover">
-            <h2 id="song-title"> </h2>
-            <audio id="audio" src="song1.mp3"></audio>
+    </header>
+
+    <main class="pcontainer">
+        <section class="lyricsContainer">
+            <div id="lyrics"></div>
+        </section>
+
+        <section class="player">
+            <img id="album-cover" src="" alt="Album Cover">
+            <h2 id="song-title"></h2>
+            <audio id="audio"></audio>
+
             <div class="controls">
-                <button id="prev-btn">Previous</button>
-                <button id="play-btn">Play</button>
-                <button id="next-btn">Next</button>
+                <button id="prev-btn" type="button">Previous</button>
+                <button id="play-btn" type="button">Play</button>
+                <button id="next-btn" type="button">Next</button>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
+
     <script src="../script/script.js"></script>
 </body>
 </html>

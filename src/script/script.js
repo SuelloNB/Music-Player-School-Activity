@@ -1,216 +1,157 @@
-let songs = [
+const songs = [
     {
         title: "Aphrodite - The Ridleys",
         src: "../../assets/audio/Aphrodite.mp3",
         album: "../../assets/images/aphrodite.jpg",
-        lyrics: `You're the moon that glows in the sky\n
-Lighting up the world when it's blue\n
-Stars they dance though late in the night\n
-Don't you know they dance just for you\n
-There you are above darkened clouds\n
-Smiling at the world from afar\n
-With the stars you wander around\n
-May they follow you wherever you are\n
-Here I am just another boy\n
-Singing songs that others have sung\n
-Trying to find the words to employ\n
-To adore the goddess of love\n
-Oh you got me in a daze yeah\n
-No it's not another phase\n
-You gave me one look and now I can't get my mind off of you\n
-And it's all because\n
-I see the galaxies when I look in your eyes and I\n
-Can't speak no I\n
-Can't speak at all\n
-I swear to Zeus you're Aphrodite in disguise\n
-Don't think that you can hide it from me\n
-Oh no I never thought I'd get this close to someone so divine\n
-Oh I can't breathe no I can't breathe at all\n
-Aphrodite could you could you please be mine oh\n
-Could you please be mine oh mine\n
-Here you are I've waited so long\n
-Hoping you would sit down to stay\n
-Cause with these stars I've been dancing along\n
-Like a fool so you'd look my way\n
-You're the moon that glows in the sky\n
-Lighting up the world when it's blue\n
-And here I sing though late in the night\n
-Hope you know I sing just for you\n
-Source: LyricFind\nSongwriters: Benjamin Manaligod\n`
+        lyricsFile: "../../assets/lyrics/aphrodite.txt"
     },
     {
-        title: "Hurts - Lany",
+        title: "Hurts - LANY",
         src: "../../assets/audio/lany-hurts.mp3",
         album: "../../assets/images/hurts.jpg",
-        lyrics: 'Here I am again, back to my old ways\n\
-Frozen with my thoughts\n\
-Wasting all my younger days\n\
-And I just can\'t decide, should I be alone?\n\
-Hate the way I am, up every night, glued to my phone\n\
-Please tell me why it\'s easy at first\n\
-But then it all breaks\n\
-The more you love, the more it hurts\n\
-And I was just fine if it didn\'t work\n\
-But now that you\'re mine\n\
-The more I love, the more it hurts, oh\n\
-Honestly, it\'s me, I am so messed up\n\
-Making all the ones who care about me wanna run\n\
-The sunset\'s black and white, it didn\'t used to be\n\
-I remember when it was pink skies, just you and me\n\
-Please tell me why it\'s easy at first\n\
-But then it all breaks\n\
-The more you love, the more it hurts\n\
-And I was just fine if it didn\'t work\n\
-But now that you\'re mine\n\
-The more I love, the more it hurts, oh\n\
-Yeah, oh oh\n\
-The more you love, the more it hurts, oh\n\
-I can\'t help myself\n\
-You\'re the one I want\n\
-It might be bad right now\n\
-But losing you would really suck\n\
-Please tell me why it\'s easy at first\n\
-But then it all breaks\n\
-The more you love, the more it hurts\n\
-And I was just fine if it didn\'t work\n\
-But now that you\'re mine\n\
-The more I love, the more it hurts, oh\n\
-Yeah, oh oh\n\
-The more you love, the more it hurts, oh\n\
-Yeah, oh oh\n\
-The more I love, the more it hurts, oh\n\
-Source: LyricFind\n\
-Songwriters: Charles Leslie Priest / Jake Clifford Goss / Paul Jason Klein'
+        lyricsFile: "../../assets/lyrics/hurts.txt"
     },
     {
         title: "LOVE. - Kendrick Lamar",
         src: "../../assets/audio/Love.mp3",
         album: "../../assets/images/Love.jpg",
-        lyrics: 'Damn\n\
-Love or lust\n\
-Damn\n\
-All of us\n\
-Give me a run for my money\n\
-There is nobody, no one to outrun me\n\
-(Another world premiere)\n\
-So give me a run for my money\n\
-Sippin\' bubbly, feelin\' lovely\n\
-Livin\' lovely\n\
-Just love me\n\
-I wanna be with you, ayy (just love me)\n\
-I wanna be with (just love me, just love)\n\
-I wanna be with you, ayy (love me), I wanna be with\n\
-I wanna be with you (love me, just love me)\n\
-If I didn\'t ride blade on curb, would you still (love me)?\n\
-If I minimized my net worth, would you still (love me)?\n\
-Keep it a hundred, I\'d rather you trust me than to (love me)\n\
-Keep it a whole one hund\', don\'t got you I got nothin\'\n\
-Ayy, I got somethin\' (I got somethin\'), ayy\n\
-Hol\' up, we gon\' function (we gon\' function), ayy\n\
-No assumptions (no assumptions), ayy\n\
-Feelin\' like Tyson wit\' it (feelin\' like Tyson wit\' it)\n\
-Knock it out twice, I\'m wit\' it (knock it out twice, I\'m wit\' it)\n\
-Only for the night, I\'m kiddin\' (only for the night, I\'m kiddin\')\n\
-Only for life, yeah\n\
-Only for life, yeah, only for life, let\'s get it\n\
-Hit that shoulder lean\n\
-I know what comin\' over me\n\
-Backstroke oversea\n\
-I know what you need\n\
-Already on ten, all money come in\n\
-All feelin\ go out, this feelin\' don\'t drought\n\
-This party won\'t end (love me, love me)\n\
-If I didn\'t ride blade on curb, would you still (love me)?\n\
-If I minimized my net worth, would you still (love me)?\n\
-Keep it a hundred, I\'d rather you trust me than to (love me)\n\
-Keep it a whole one hund\', don\'t got you I got nothin\' (oh, oh)\n\
-Give me a run for my money\n\
-There is nobody, no one to outrun me\n\
-So give me a run for my money\n\
-Sippin\' bubbly, feelin\' lovely\n\
-Livin\' lovely\n\
-Just love me\n\
-I wanna be with you, ayy (just love me)\n\
-I wanna be with (just love me, just love)\n\
-I wanna be with you, ayy (love me), I wanna be with\n\
-I wanna be with you (love me, just love me)\n\
-I\'m on the way\n\
-We ain\'t got no time to waste\n\
-Poppin\' your gum on the way (love me)\n\
-Am I in the way?\n\
-I don\'t want pressure you none\n\
-I want your blessin\' today (love me)\n\
-Oh, by the way, open the door by the way\n\
-Told you that I\'m on the way (love me)\n\
-I\'m on the way, I know connection is vague\n\
-Pick up the phone for me, babe (love me)\n\
-Dammit, we jammin\'\n\
-Bad attitude from your nanny\n\
-Curves and your hips from yo\' mammy\n\
-Remember Gardena? I took the studio camera\n\
-I know Top will be mad at me\n\
-I had to do it, I want your body, your music\n\
-I bought the big one to prove it\n\
-Look what you made\n\
-Told you that I\'m on the way\n\
-I\'m like an exit away, yep\n\
-If I didn\'t ride blade on curb, would you still (love me)?\n\
-If I minimized my net worth, would you still (love me)?\n\
-Keep it a hundred, I\'d rather you trust me than to (love me)\n\
-Keep it a whole one hund\', don\'t got you I got nothin\' (oh, oh)\n\
-Give me a run for my money\n\
-There is nobody, no one to outrun me\n\
-So give me a run for my money\n\
-Sippin\' bubbly, feelin\' lovely\n\
-Livin\' lovely\n\
-Just love me\n\
-I wanna be with you, ayy (just love me)\n\
-I wanna be with (just love me, just love)\n\
-I wanna be with you, ayy (love me), I wanna be with\n\
-I wanna be with you (love me, just love me)\n\
-Source: LyricFind\n\
-Songwriters: Anthony Tiffith / Greg Kursten / Kendrick Lamar / Mark Spears / Teddy Walton / Zacari Pacaldo'
+        lyricsFile: "../../assets/lyrics/love.txt"
     },
     {
-        title: "Pink Skies - Lany",
+        title: "Pink Skies - LANY",
         src: "../../assets/audio/pinkskies.mp3",
         album: "../../assets/images/pinkskies.jpg",
-        lyrics: "Song 3 lyrics line 1\nSong 3 lyrics line 2\nSong 3 lyrics line 3"
+        lyricsFile: "../../assets/lyrics/pinkskies.txt"
     },
     {
-        title: "Thick and Thin - Lany",
+        title: "Thick and Thin - LANY",
         src: "../../assets/audio/thick.mp3",
         album: "../../assets/images/thick.jpg",
-        lyrics: "Song 3 lyrics line 1\nSong 3 lyrics line 2\nSong 3 lyrics line 3"
+        lyricsFile: "../../assets/lyrics/thick.txt"
     }
 ];
 
-let currentSongIndex = 0; // Start from the first song
-let audio = document.getElementById("audio");
-let songTitle = document.getElementById("song-title");
-let albumCover = document.getElementById("album-cover");
-let lyricsDisplay = document.getElementById("lyrics");
+let currentSongIndex = 0;
+let currentLyricIndex = -1;
 
-let playBtn = document.getElementById("play-btn");
-let nextBtn = document.getElementById("next-btn");
-let prevBtn = document.getElementById("prev-btn");
+const audio = document.getElementById("audio");
+const songTitle = document.getElementById("song-title");
+const albumCover = document.getElementById("album-cover");
+const lyricsDisplay = document.getElementById("lyrics");
+
+const playBtn = document.getElementById("play-btn");
+const nextBtn = document.getElementById("next-btn");
+const prevBtn = document.getElementById("prev-btn");
 
 playBtn.addEventListener("click", playPause);
 nextBtn.addEventListener("click", nextSong);
 prevBtn.addEventListener("click", prevSong);
 
+window.addEventListener("resize", handleResponsiveLyrics);
+audio.addEventListener("timeupdate", updateLyricHighlight);
+audio.addEventListener("ended", nextSong);
 
-
-// Automatically play the first song when the page loads
 window.onload = function () {
-    currentSongIndex = 0; // Start with the first song
-    updateSong();
+    currentSongIndex = 0;
+    updateSong(false);
+    handleResponsiveLyrics();
 };
+
+function buildTimedLyricsFromText(lyricsText, duration) {
+    if (!lyricsText) return [];
+
+    const rawLines = lyricsText
+        .split("\n")
+        .map(line => line.trim())
+        .filter(line =>
+            line !== "" &&
+            !line.toLowerCase().includes("source:") &&
+            !line.toLowerCase().includes("songwriters:")
+        );
+
+    if (rawLines.length === 0) return [];
+
+    const safeDuration = duration && isFinite(duration) ? duration : rawLines.length * 3;
+    const secondsPerLine = safeDuration / rawLines.length;
+
+    return rawLines.map((line, index) => ({
+        time: index * secondsPerLine,
+        text: line
+    }));
+}
+
+function renderLyrics() {
+    const currentSong = songs[currentSongIndex];
+    lyricsDisplay.innerHTML = "";
+
+    if (!currentSong.timedLyrics || currentSong.timedLyrics.length === 0) return;
+
+    currentSong.timedLyrics.forEach((line, index) => {
+        const p = document.createElement("p");
+        p.textContent = line.text;
+        p.className = "lyric-line";
+        p.dataset.index = index;
+        lyricsDisplay.appendChild(p);
+    });
+}
+
+function updateLyricHighlight() {
+    const currentSong = songs[currentSongIndex];
+    if (!currentSong.timedLyrics || currentSong.timedLyrics.length === 0) return;
+
+    const currentTime = audio.currentTime;
+    let newIndex = 0;
+
+    for (let i = 0; i < currentSong.timedLyrics.length; i++) {
+        if (currentTime >= currentSong.timedLyrics[i].time) {
+            newIndex = i;
+        } else {
+            break;
+        }
+    }
+
+    if (newIndex !== currentLyricIndex) {
+        currentLyricIndex = newIndex;
+
+        const lines = lyricsDisplay.querySelectorAll(".lyric-line");
+        lines.forEach((line, index) => {
+            line.classList.toggle("active-lyric", index === currentLyricIndex);
+        });
+
+        const activeLine = lyricsDisplay.querySelector(".active-lyric");
+        if (activeLine && window.innerWidth > 768) {
+            activeLine.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+        }
+    }
+}
+
+async function loadLyricsFromFile(filePath) {
+    try {
+        const response = await fetch(filePath);
+
+        if (!response.ok) {
+            throw new Error(`Failed to load lyrics: ${response.status}`);
+        }
+
+        return await response.text();
+    } catch (error) {
+        console.error("Lyrics file error:", error);
+        return "Lyrics could not be loaded.";
+    }
+}
 
 function playPause() {
     if (audio.paused) {
-        audio.play();
-        playBtn.innerText = "Pause";
+        audio.play()
+            .then(() => {
+                playBtn.innerText = "Pause";
+            })
+            .catch(error => {
+                console.error("Play failed:", error);
+            });
     } else {
         audio.pause();
         playBtn.innerText = "Play";
@@ -219,35 +160,56 @@ function playPause() {
 
 function nextSong() {
     currentSongIndex = (currentSongIndex + 1) % songs.length;
-    updateSong();
+    updateSong(true);
 }
 
 function prevSong() {
     currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
-    updateSong();
+    updateSong(true);
 }
 
-function updateSong() {
-    lyricsDisplay.innerHTML = "";
-    audio.src = songs[currentSongIndex].src;
-    songTitle.innerText = songs[currentSongIndex].title;
+async function updateSong(autoPlay = true) {
+    const currentSong = songs[currentSongIndex];
+    currentLyricIndex = -1;
 
-    if (songs[currentSongIndex].album) {
-        albumCover.src = songs[currentSongIndex].album;
-        albumCover.alt = "Album cover for " + songs[currentSongIndex].title;
+    lyricsDisplay.innerHTML = "";
+    audio.src = currentSong.src;
+    songTitle.innerText = currentSong.title;
+
+    if (currentSong.album) {
+        albumCover.src = currentSong.album;
+        albumCover.alt = "Album cover for " + currentSong.title;
     } else {
-        albumCover.src = "default-cover.jpg";
+        albumCover.src = "../../assets/images/default.jpg";
         albumCover.alt = "Default album cover";
     }
 
-    audio.load();
-    audio.play().then(() => {
-        playBtn.innerText = "Pause";
-    }).catch(error => {
-        console.error("Autoplay failed:", error);
-    });
+    const lyricsText = await loadLyricsFromFile(currentSong.lyricsFile);
+    currentSong.timedLyrics = [];
 
-    setTimeout(() => {
-        lyricsDisplay.innerText = songs[currentSongIndex].lyrics;
-    }, 50);
+    audio.load();
+
+    audio.onloadedmetadata = function () {
+        currentSong.timedLyrics = buildTimedLyricsFromText(lyricsText, audio.duration);
+        renderLyrics();
+        updateLyricHighlight();
+
+        if (autoPlay) {
+            audio.play()
+                .then(() => {
+                    playBtn.innerText = "Pause";
+                })
+                .catch(error => {
+                    console.error("Autoplay failed:", error);
+                    playBtn.innerText = "Play";
+                });
+        } else {
+            playBtn.innerText = "Play";
+        }
+    };
+}
+
+function handleResponsiveLyrics() {
+    lyricsDisplay.style.animation = "none";
+    lyricsDisplay.style.position = "relative";
 }
