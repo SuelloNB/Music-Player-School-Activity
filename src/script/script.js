@@ -84,8 +84,8 @@ Songwriters: Charles Leslie Priest / Jake Clifford Goss / Paul Jason Klein'
     },
     {
         title: "LOVE. - Kendrick Lamar",
-        src: "assets/Love..mp3",
-        album: "assets/Love..jpg",
+        src: "../../assets/audio/Love.mp3",
+        album: "../../assets/images/Love.jpg",
         lyrics: 'Damn\n\
 Love or lust\n\
 Damn\n\
@@ -173,14 +173,14 @@ Songwriters: Anthony Tiffith / Greg Kursten / Kendrick Lamar / Mark Spears / Ted
     },
     {
         title: "Pink Skies - Lany",
-        src: "assets/pinkskies.mp3",
-        album: "assets/pinkskies.jpg",
+        src: "../../assets/audio/pinkskies.mp3",
+        album: "../../assets/images/pinkskies.jpg",
         lyrics: "Song 3 lyrics line 1\nSong 3 lyrics line 2\nSong 3 lyrics line 3"
     },
     {
         title: "Thick and Thin - Lany",
-        src: "assets/thick.mp3",
-        album: "assets/thick.jpg",
+        src: "../../assets/audio/thick.mp3",
+        album: "../../assets/images/thick.jpg",
         lyrics: "Song 3 lyrics line 1\nSong 3 lyrics line 2\nSong 3 lyrics line 3"
     }
 ];
