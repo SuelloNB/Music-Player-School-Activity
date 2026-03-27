@@ -41,8 +41,8 @@ Music-Player-School-Activity/
 ├── assets/
 │   ├── audio/
 │   │   ├── Aphrodite.mp3
-│   │   ├── Love.mp3
 │   │   ├── lany-hurts.mp3
+│   │   ├── Love.mp3
 │   │   ├── pinkskies.mp3
 │   │   └── thick.mp3
 │   ├── images/
@@ -57,13 +57,11 @@ Music-Player-School-Activity/
 │       ├── love.txt
 │       ├── pinkskies.txt
 │       └── thick.txt
-├── src/
-│   ├── css/
-│   │   └── styles.css
-│   ├── html/
-│   │   ├── index.html
-│   │   ├── about.html
-│   │   └── music.html
-│   └── script/
-│       └── script.js
+├── css/
+│   └── styles.css
+├── script/
+│   └── script.js
+├── about.html
+├── index.html
+├── music.html
 └── README.md
